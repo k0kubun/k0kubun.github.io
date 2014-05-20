@@ -19,7 +19,7 @@ $(function(){
         recentWork = $('<li><a class="url"></a><span class="desc" /></li>');
         recentWork.find('a').attr('href', data.html_url).html(data.name);
 
-        desc = (data.description || '').slice(0, 60);
+        desc = (data.description || '')//.slice(0, 60);
         if (desc != (data.description || '')) {
           desc += '...';
         }
