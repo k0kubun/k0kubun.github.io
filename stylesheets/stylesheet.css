@@ -368,6 +368,9 @@ Full-Width Styles
 
 .desc {
   margin-left: 6px;
+}
+
+.work {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

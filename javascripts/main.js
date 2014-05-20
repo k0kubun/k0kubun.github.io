@@ -16,7 +16,7 @@ $(function(){
 
       for (i = 0; i < l; i++) {
         data = datas[i];
-        recentWork = $('<li><a class="url"></a><span class="desc" /></li>');
+        recentWork = $('<li class="work"><a class="url"></a><span class="desc" /></li>');
         recentWork.find('a').attr('href', data.html_url).html(data.name);
 
         desc = (data.description || '')//.slice(0, 60);
