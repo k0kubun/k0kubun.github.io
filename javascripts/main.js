@@ -24,7 +24,7 @@ $(function(){
           desc += '...';
         }
         if (desc.length > 0) {
-          desc = '- ' + desc;
+          desc = ' - ' + desc;
         }
         recentWork.find('.desc').text(desc);
 
