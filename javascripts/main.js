@@ -1,7 +1,7 @@
 $(function(){
   $.ajax({
     type: 'GET',
-    url: 'https://api.github.com/users/k0kubun/repos?sort=created',
+    url: 'https://api.github.com/users/k0kubun/repos?sort=updated',
     cache: false,
     dataType: 'jsonp',
     success: function(data) {
