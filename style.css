@@ -4,14 +4,7 @@ body {
   font-family: sans-serif;
 }
 p{
-  color: #42629f;
   font-size: 13px;
-}
-h3{
-  color: #0A1829;
-}
-h4{
-  color: #0A1829;
 }
 
 /*profile*/
@@ -31,24 +24,32 @@ padding-right: 10px;
 .hello{
 font-weight: bold;
 font-size: 25px;
-color: #0A1829;
 }
 
-/*button*/
+/*button
 .button{
    display: inline-block;
    font-weight: bold;
    padding-left: 5px;
    padding-right: 5px;
    padding-top: 10px;
-   padding-bottom: 10px;
+   padding-bottom: 20px;
    text-decoration: none;
-   color: #858aa0;
+   color: #FC4349;
+}
+*/
+.button{
+  display: inline-block;
+  padding: 0.3em 0.8em;
+  text-decoration: none;
+  background: #FC4349;
+  color: #FFF;
+  font-weight: bold;
+  border-radius: 3px;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 
-.button:hover {
-    color: #FC4349;
-}
 .most{
 overflow: hidden;
 background-color: #eee;
@@ -79,22 +80,6 @@ color: #42629f;
 .box a:visited { color: #42629f; }
 .box a:hover { color: #42629f; }
 .box a:active { color: #42629f; }
-
-.others{
-width: 800px;
-margin: auto;
-overflow: hidden;
-}
-.name{
-  float: left;
-  width: 380px;
-  height: 50px;
-  text-align: center;
-  margin: 5px;
-}
-.name a{
-  font-size: 14px;
-}
 
 
 * {box-sizing: border-box;}
@@ -199,9 +184,10 @@ top: -24px;
 font-weight: bold;
 font-size: 14px;
 }
-.time{
-font-size: 13px;
-color: #0A1829;
+
+.time img{
+  vertical-align:middle;
+  margin-right: 10px;
 }
 
 .project{
@@ -212,14 +198,14 @@ overflow: hidden;
 
 .content_left{
   float: left;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 40px;
+  margin-bottom: 40px;
   margin-right: 20px;
 }
 .content_right{
   float: right;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 40px;
+  margin-bottom: 40px;
   margin-left: 20px;
 }
 .clear {
@@ -239,12 +225,43 @@ font-size: 13px;
 text-decoration: none;
 font-size: 18px;
 font-weight: bold;
-color: #42629f;
+color: #FC4349;
 }
-.exp a:link { color: #42629f; }
-.exp a:visited { color: #42629f; }
+
+.exp a:link { color: #FC4349; }
+.exp a:visited { color: #FC4349; }
 .exp a:hover { color: #FC4349; }
-.exp a:active { color: #42629f; }
+.exp a:active { color: #FC4349; }
+
+.others_left {
+float: left;
+width: 280px;
+height: 400px;
+margin: 10px;
+padding-top: 110px;;
+text-align: center;
+font-size: 13px;
+}
+
+.others{
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+.others_right{
+  width: 1000px;
+  height: 400px;
+}
+
+.name {
+font-size: 16px;
+color: #FC4349;
+}
+
+.others_right a:link { color: #FC4349; }
+.others_right a:visited { color: #FC4349; }
+.others_right a:hover { color: #FC4349; }
+.others_right a:active { color: #FC4349; }
 
 .line{
 width: 80px;
