@@ -4,21 +4,14 @@
   <title>k0kubun</title>
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="stylesheet" type="text/css" href="style.css">
-
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
   <script>
 $(function(){
-   // #で始まるアンカーをクリックした場合に処理
    $('a[href^=#]').click(function() {
-      // スクロールの速度
-      var speed = 400; // ミリ秒
-      // アンカーの値取得
+      var speed = 400;
       var href= $(this).attr("href");
-      // 移動先を取得
       var target = $(href == "#" || href == "" ? 'html' : href);
-      // 移動先を数値で取得
       var position = target.offset().top;
-      // スムーススクロール
       $('body,html').animate({scrollTop:position}, speed, 'swing');
       return false;
    });
@@ -27,128 +20,142 @@ $(function(){
 </head>
 
 <body>
-
 <table id="profile">
 <tr>
   <td><img src="3138447.png" width="150" height="150"></td>
   <td><span class="hello">I'm k0kubun</span>
       <p>Software Engineer, interested in:<br>
-      ・Performance optimization<br>
-      ・Building and contributing to OSS<br></p>
-
-      <div class="accout">
-        <a href="https://github.com/k0kubun" target="_blank">GitHub</a>
-        <a href="https://twitter.com/k0kubun" target="_blank">Twitter</a>
-        <a href="http://k0kubun.hatenablog.com" target="_blank">Blog</a>
-        <a href="https://speakerdeck.com/k0kubun" target="_blank">SpeakerDeck</a>
-        <a href="http://qiita.com/k0kubun" target="_blank">Qiita</a>
-        <a href="https://rubygems.org/profiles/k0kubun" target="_blank">rubygems</a>
-      </div>
-
-  </td></tr>
+      - Performance optimization<br>
+      - Building and contributing to OSS<br></p>
+      <a href="https://github.com/k0kubun" target="_blank" class="accout">GitHub</a>
+      <a href="https://twitter.com/k0kubun" target="_blank" class="accout">Twitter</a>
+      <a href="http://k0kubun.hatenablog.com" target="_blank" class="accout">Blog</a>
+      <a href="https://speakerdeck.com/k0kubun" target="_blank" class="accout">SpeakerDeck</a>
+      <a href="http://qiita.com/k0kubun" target="_blank" class="accout">Qiita</a>
+      <a href="https://rubygems.org/profiles/k0kubun" target="_blank" class="accout">rubygems</a>
+  </td>
+</tr>
 </table>
-
-
 
 <h2 id="EXPERIENCE" align="center">EXPERIENCE</h2>
 
 <div class="nenpyo">
 <ul>
-  <li class="left">
-    <p><span class="time"><img src="td.png" width="40.5" height="28.35">Mar 2017 - present</span><br>
-    <span class="inc">Treasure Data Inc.</span></p>
-    <p>・Treasure Data API development<br>
-    - <a href="https://speakerdeck.com/k0kubun/cruby-and-erb-optimization-at-td-hackathon" target="_blank">Speaker Deck</a></p>
-  </li>
+  <div class="project">
+    <li class="left"><p>Nov 2017</p></li>
+    <li class="right">
+      <p class="inc">Final Nominee Ruby Prize 2017</p>
+    </li>
+  </div>
 
+<div class="project">
+  <li class="left"><p>Mar 2017 - present</p></li>
   <li class="right">
-    <p><span class="time"><img src="cookpad.png" width="37" height="37">Apr 2015 - Feb 2017</span><br>
-    <span class="inc">Developer Productivity Group, Cookpad Inc.</span></p>
-    <p>・Upgrading Rails of cookpad.com, from 4.1 to 4.2<br>
-       - <a href="http://techlife.cookpad.com/entry/how-to-safely-upgrade-rails" target="_blank">Speaker Deck (in Japanese)</a></p>
-    <p>・Optimizing development environment of Rails application<br>
-       - <a href="https://speakerdeck.com/k0kubun/railsapurikai-fa-huan-jing-falsegao-su-hua" target="_blank">Speaker Deck (in Japanese)</a></p>
-    <p>・Built Barbeque, a multi-tenant job queue system using Docker<br>
-       - <a href="https://speakerdeck.com/k0kubun/scalable-job-queue-system-built-with-docker" target="_blank">Speaker Deck</a></p>
+    <p class="inc">Treasure Data Inc.</p>
+    <p class="item">Treasure Data API development<br>
+      <span class="speaker">- <a href="https://speakerdeck.com/k0kubun/cruby-and-erb-optimization-at-td-hackathon" target="_blank">Speaker Deck</a>
+      </span></p>
   </li>
+</div>
 
+<div class="project">
+  <li class="left"><p>Apr 2015 - Feb 2017</p></li>
   <li class="right">
-    <p><span class="time">Oct 2013 - Mar 2015</span><br>
-    <span class="inc">Part-time Rails application engineer, Cookpad Inc.</span></p>
+    <p class="inc">Developer Productivity Group, Cookpad Inc.</p>
+    <p class="item">Upgrading Rails of cookpad.com, from 4.1 to 4.2<br>
+      <span class="speaker">- <a href="http://techlife.cookpad.com/entry/how-to-safely-upgrade-rails" target="_blank">
+        Speaker Deck (in Japanese)</span></a></p>
+    <p class="item">Optimizing development environment of Rails application<br>
+      <span class="speaker">- <a href="https://speakerdeck.com/k0kubun/railsapurikai-fa-huan-jing-falsegao-su-hua" target="_blank">
+        Speaker Deck (in Japanese)</span></a></p>
+    <p class="item">Built Barbeque, a multi-tenant job queue system using Docker<br>
+     <span class="speaker">- <a href="https://speakerdeck.com/k0kubun/scalable-job-queue-system-built-with-docker" target="_blank">
+       Speaker Deck</span></a></p>
   </li>
+</div>
 
-   <li class="left">
-   <p><span class="time">Mar 2015 - Apr 2011</span><br>
-    <span class="inc">BS Computer Science Tokyo Institute of Technology</span>
-   </p>
+<div class="project">
+  <li class="left"><p>Oct 2013 - Mar 2015</p></li>
+  <li class="right">
+    <p class="inc">Part-time Rails application engineer, Cookpad Inc.</p>
   </li>
+</div>
+
+<div class="project">
+  <li class="left"><p>Apr 2011 - Mar 2015</p></li>
+  <li class="right">
+    <p class="inc">BS Computer Science Tokyo Institute of Technology</p>
+  </li>
+</div>
+
 </ul>
+</div>
 </div>
 
 <h2 id="OPENSOURCE" align="center">OPEN SOURCE PROJECTS</h2>
 
 <div class="color">
-<div class="project">
-<img src="https://camo.githubusercontent.com/40548dbb8ffe8973180cf56d71268306197bdbfc/68747470733a2f2f692e6779617a6f2e636f6d2f30663063303336326236626436396638323731356265633164386361613139312e706e67" alt="Hamlit Benchmark" data-canonical-src="https://i.gyazo.com/0f0c0362b6bd69f82715bec1d8caa191.png"
-  width="600px" class="content_right">
-<div class="exp">
-  <a href="https://github.com/k0kubun/hamlit" target="_blank" id="Hamlit">Hamlit</a>
-  <div class="line"></div>
-  <p>High Performance Haml Implementation, which is the fastest template engine for Ruby</p>
-</div>
-</div>
+  <div class="project">
+    <img src="https://camo.githubusercontent.com/40548dbb8ffe8973180cf56d71268306197bdbfc/68747470733a2f2f692e6779617a6f2e636f6d2f30663063303336326236626436396638323731356265633164386361613139312e706e67" alt="Hamlit Benchmark" data-canonical-src="https://i.gyazo.com/0f0c0362b6bd69f82715bec1d8caa191.png"
+    width="600px" class="content_right" id="Hamlit">
+    <div class="exp">
+      <a href="https://github.com/k0kubun/hamlit" target="_blank">Hamlit</a>
+      <div class="line"></div>
+      <p>High Performance Haml Implementation, which is the fastest template engine for Ruby</p>
+    </div>
+  </div>
 </div>
 
 <div class="project" >
-<img src="https://camo.githubusercontent.com/294371279bd0dd8de9f232b28ca908fb45d52912/68747470733a2f2f692e6779617a6f2e636f6d2f39643464303031363436383366353136643434623365353336623364643365392e676966" alt="" data-canonical-src="https://i.gyazo.com/9d4d00164683f516d44b3e536b3dd3e9.gif"
- style="width:600px;" class="content_left" id="md2key">
-<div class="exp">
-  <a href="https://github.com/k0kubun/md2key" target="_blank">md2key</a><br>
-  <div class="line"></div>
-  <p>md2key converts markdown to keynote by GUI scripting with AppleScript</p>
-</div>
-</div>
-
-<div class="color">
-<div class="project">
-<img src="https://camo.githubusercontent.com/d28054f136b8002e6ca205b128ba180380865011/68747470733a2f2f692e6779617a6f2e636f6d2f61653838366337376132646565316632306461656263346633633238646463352e676966" data-canonical-src="https://i.gyazo.com/ae886c77a2dee1f20daebc4f3c28ddc5.gif"
-width="444px" class="content_right"  id="Nocturn">
-<div class="exp">
- <a href="https://github.com/k0kubun/Nocturn" target="_blank">Nocturn</a><br>
- <div class="line"></div>
- <p>Multi-platform Twitter Client built with React, Redux and Electron</p>
- <img src="Nocturn.png" width="102" height="102">
- </div>
-</div>
-</div>
-
-<div class="project">
-<img src="pp.png" width="580px" height="299" class="content_left"  id="pp">
-<div class="exp">
-  <a href="https://github.com/k0kubun/pp" target="_blank">pp</a><br>
-  <div class="line"></div>
-  <p>Colored pretty printer for Go language</p>
-   </div>
+  <img src="https://camo.githubusercontent.com/294371279bd0dd8de9f232b28ca908fb45d52912/68747470733a2f2f692e6779617a6f2e636f6d2f39643464303031363436383366353136643434623365353336623364643365392e676966" alt="" data-canonical-src="https://i.gyazo.com/9d4d00164683f516d44b3e536b3dd3e9.gif"
+  width="600px" class="content_left" id="md2key">
+  <div class="exp">
+    <a href="https://github.com/k0kubun/md2key" target="_blank">md2key</a>
+    <div class="line"></div>
+    <p>md2key converts markdown to keynote by GUI scripting with AppleScript</p>
+  </div>
 </div>
 
 <div class="color">
-<div class="project">
-<img src="gitstar.png" width="596px" height="464" class="content_right" id="gitstar-ranking">
-<div class="exp">
-  <a href="https://github.com/k0kubun/gitstar-ranking" target="_blank">gitstar-ranking</a><br>
-  <div class="line"></div>
-    <p>Rails application to show star ranking of GitHub<br>(not maintained)</p>
-   </div>
-</div>
+  <div class="project">
+    <img src="https://camo.githubusercontent.com/d28054f136b8002e6ca205b128ba180380865011/68747470733a2f2f692e6779617a6f2e636f6d2f61653838366337376132646565316632306461656263346633633238646463352e676966" data-canonical-src="https://i.gyazo.com/ae886c77a2dee1f20daebc4f3c28ddc5.gif"
+    width="444px" class="content_right"  id="Nocturn">
+    <div class="exp">
+      <a href="https://github.com/k0kubun/Nocturn" target="_blank">Nocturn</a>
+      <div class="line"></div>
+      <p>Multi-platform Twitter Client built with React, Redux and Electron</p>
+      <img src="Nocturn.png" width="102" height="102">
+    </div>
+  </div>
 </div>
 
 <div class="project">
-<img src="llrb.png" width="600px" height="269" class="content_left" id="LLRB">
-<div class="exp">
-  <a href="https://github.com/k0kubun/llrb" target="_blank">LLRB</a><br>
-  <div class="line"></div>
-     <p>LLRB is a LLVM-based JIT compiler for Ruby.</p>
-   </div>
+  <img src="pp.png" width="580px" height="299" class="content_left" id="pp">
+  <div class="exp">
+    <a href="https://github.com/k0kubun/pp" target="_blank">pp</a>
+    <div class="line"></div>
+    <p>Colored pretty printer for Go language</p>
+  </div>
+</div>
+
+<div class="color">
+  <div class="project">
+    <img src="gitstar.png" width="596px" height="464" class="content_right" id="gitstar-ranking">
+    <div class="exp">
+      <a href="https://github.com/k0kubun/gitstar-ranking" target="_blank">gitstar-ranking</a>
+      <div class="line"></div>
+      <p>Rails application to show star ranking of GitHub<br>(not maintained)</p>
+    </div>
+  </div>
+</div>
+
+<div class="project">
+  <img src="llrb.png" width="600px" height="269" class="content_left" id="LLRB">
+  <div class="exp">
+    <a href="https://github.com/k0kubun/llrb" target="_blank">LLRB</a>
+    <div class="line"></div>
+    <p>LLRB is a LLVM-based JIT compiler for Ruby.</p>
+  </div>
 </div>
 
 <div class="color" id="OTHERS">
@@ -198,18 +205,12 @@ width="444px" class="content_right"  id="Nocturn">
    - <a href="https://speakerdeck.com/k0kubun/high-performance-template-engine" target="_blank">SpeakerDeck</a>,</p>
 <p><span class="border">RubyKaigi 2015</span>How I debugged debugger
    - <a href="https://speakerdeck.com/k0kubun/how-i-debugged-debugger-number-rubykaigi-1" target="_blank">SpeakerDeck</a></p>
-
 </div>
 </div>
-
-
 
 </body>
 
-
-
 <footer>
-
 <div class="project">
 <div class="menu">
  <ul class="nav">
@@ -250,5 +251,4 @@ width="444px" class="content_right"  id="Nocturn">
 
 <p class="main" align="center">(C) 2017 k0kubun</p>
 </footer>
-
 </html>
