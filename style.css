@@ -1,27 +1,72 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: Arial, sans-serif;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 p{
   font-size: 13px;
 }
+a{
+  font-size: 13px;
+}
 
+
+.menu{
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: #25354F;
+  box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.29);
+}
+.nav{
+float: left;
+}
+.nav img{
+  margin: auto;
+}
+.menu ul {list-style: none;}
+.menu a{
+  color: #eee;
+}
+
+.main{
+text-decoration: none;
+font-weight: bold;
+}
+.main:hover{
+  color: #FC4349;
+}
+.sub{
+  text-decoration: none;
+  padding-left: 30px;
+}
+.sub:hover{
+  color: #FC4349;
+}
+
+.sub:before{
+content: '- ';
+}
+.sub_b{
+margin-left: 20px;
+font-size: 13px;
+color: #eee;
+}
 
 a.accout{
   color: #FC4349;
   padding-right: 2px;
-  font-size: 13px;
 }
-a.accout:link { color: #FC4349; }
-a.accout:visited { color: #FC4349; }
-a.accout:hover { color: #FC4349; }
-a.accout:active { color: #FC4349; }
 
 /*profile*/
 #profile {
 margin: auto;
-padding-top: 50px;
+margin-top: 50px;
+margin-bottom: 50px;
 }
 #profile td{
 font-size: 14px;
@@ -39,14 +84,23 @@ padding-right: 10px;
 font-weight: bold;
 font-size: 27px;
 }
-.most{
-overflow: hidden;
-background-color: #eee;
+
+a.twitter{background-color: #55acee;}
+a.github{background-color: #24292E;}
+a.blog{background-color: #008fde;}
+a.SpeakerDeck{background-color: #1F855B;}
+a.Qiita{background-color: #90D15D;}
+a.rubygems{background-color: #E9573F;}
+.account a{
+  font-weight: bold;
+  padding: 8px;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
 }
-.block{
-width: 900px;
-margin: auto;
-overflow: hidden;
+.account p{
+  margin-top: 23px;
 }
 
 * {box-sizing: border-box;}
@@ -122,19 +176,15 @@ transition: .2s;
 .nenpyo li.left:after {
 left: auto;
 }
-
 .nenpyo li.right:after {
 right: auto;
 }
-
 .inc{
 font-weight: bold;
 font-size: 14px;
 }
-
-.inc img{
-  vertical-align:middle;
-  margin-right: 10px;
+.speaker{
+  padding-left: 30px;
 }
 
 .project{
@@ -142,34 +192,62 @@ width: 1000px;
 margin: auto;
 overflow: hidden;
 }
-.speaker{
-  padding-left: 30px;
-}
+
+.example {/*親div*/
+  position: relative;/*相対配置*/
+  width: 600px;
+  }
+  .label{
+    position: absolute;/*絶対配置*/
+    width: 600px;
+    height: 120px;
+    top: 35%;
+    left: 0;
+    background-color:rgba(255,255,255,0.5);
+  }
+  .example table {
+    margin:0;
+    padding:0;
+    position: absolute;/*絶対配置*/
+    width: 300px;
+    top: 50%;
+    left: 50%;
+    translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+  }
+  .example td{
+    text-align: center;
+    font-size: 14px;
+  }
+  .example a{
+    font-size: 16px;
+    color: #FC4349;
+    text-decoration: none;
+    font-weight: bold;
+  }
 
 .content_left{
   float: left;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  margin-right: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 .content_right{
-  float: right;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  margin-left: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
-
 .exp {
 float: left;
-width: 280px;
-height: 160px;
-margin: 10px;
-padding-top: 130px;
+width: 300px;
+height: 300px;
+margin-left: 10px;
+padding-top: 120px;
 text-align: center;
 }
 
 .exp p{
 font-size: 14px;
+padding-left: 30px;
+padding-right: 30px;
 }
 .exp a{
 text-decoration: none;
@@ -183,14 +261,18 @@ color: #FC4349;
 .exp a:hover { color: #FC4349; }
 .exp a:active { color: #FC4349; }
 
+.noc{
+  width: 800px;
+  margin: auto;
+}
 .others_left {
 float: left;
 width: 280px;
-height: 260px;
 margin: 10px;
 padding-top: 110px;;
 text-align: center;
 font-size: 13px;
+height: 230px;
 }
 
 .others{
@@ -200,6 +282,7 @@ font-size: 13px;
 }
 .others_right{
   width: 1000px;
+  height: 230px;
 }
 
 .name {
@@ -223,14 +306,10 @@ margin: auto;
   background-color: #eee;
   width: 100%;
 }
-.talk{
-margin-bottom: 40px;
-}
+.talk{margin-bottom: 40px;}
 
 .talk p{
-    margin-bottom: 10px;
     margin-left: 100px;
-    font-size: 14px;
     padding-left: 100px;
 }
 .border{
@@ -240,44 +319,18 @@ margin-bottom: 40px;
   color: #FC4349;
 }
 
+.inst{
+  padding: 8px;
+  background-color: #8B35Bf;
+  color: #fff;
+  border-radius: 3px;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
 /*FOOTER*/
 footer{
-font-size: 12px;
-background-color: #25354F;
-color: #eee;
 margin-bottom: 0;
-}
-
-.menu{
-  overflow: hidden;
-  width: 750px;
-  margin: auto;
-}
-
-.nav{
-width: auto;
-float: left;
-}
-
-.menu ul {
-list-style: none;
-}
-
-.main{
-color: #eee;
-text-decoration: none;
-font-weight: bold;
-}
-
-.sub{
-  color: #eee;
-  text-decoration: none;
-  padding-left: 20px;
-}
-
-.sub:before{
-content: '- ';
-color: #eee;
 }
 
 .signature{
