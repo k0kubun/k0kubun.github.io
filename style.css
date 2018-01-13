@@ -1,340 +1,147 @@
 body {
   margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
 }
-p{
-  font-size: 13px;
+p, a, dt, dd{
+  font-size: 14px;
+  color: #333;
 }
 a{
-  font-size: 13px;
+  text-decoration: none;
 }
-
-
-.menu{
-  overflow: hidden;
+ul{
+  list-style: none;
+}
+.container{
+  width: 960px;
+  margin: auto;
+}
+/*---------------------- menu ----------------------*/
+header{
+  position:fixed;
+  width:100%;
+  z-index:100;
+  height: 25px;
+  background-color: #fff;
+  border-bottom: solid 1px #ccc;
+}
+nav.top_menu{
+  display: flex;
+}
+.top_menu a{
+  color: #333;
+  font-size: 12px;
+}
+ul.main_menu, ul.accont{
   margin: 0;
   padding: 0;
-  background-color: #25354F;
-  box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.29);
 }
-.nav{
-float: left;
+ul.accont{
+  margin-left: auto;
 }
-.nav img{
+.main_menu li, .accont li{
+  display: inline;
+  padding: 0 3px;
+}
+.accont li{
+  font-weight: bold;
+}
+a.github{color: #24292E;}
+a.twitter{color: #55acee;}
+a.blog{color: #008fde;}
+a.speakerdeck{color: #1F855B;}
+a.qiita{color: #90D15D;}
+a.rubygems{color: #E9573F;}
+
+/*---------------------- main ----------------------*/
+main{
+  padding-top: 150px; /* 固定メニューの幅 */
+}
+h1{
+  font-size: 23px;
+  text-align: center;
+}
+h2{
+  font-size: 20px;
+}
+h3{
+  font-size: 18px;
+}
+h2:first-letter {
+font-size: 1.5em;
+color: #FC4349;
+}
+/*---------------------- top ----------------------*/
+.top img{
+  display: block;
   margin: auto;
-}
-.menu ul {list-style: none;}
-.menu a{
-  color: #eee;
-}
-
-.main{
-text-decoration: none;
-font-weight: bold;
-}
-.main:hover{
-  color: #FC4349;
-}
-.sub{
-  text-decoration: none;
-  padding-left: 30px;
-}
-.sub:hover{
-  color: #FC4349;
-}
-
-.sub:before{
-content: '- ';
-}
-.sub_b{
-margin-left: 20px;
-font-size: 13px;
-color: #eee;
-}
-
-a.accout{
-  color: #FC4349;
-  padding-right: 2px;
-}
-
-/*profile*/
-#profile {
-margin: auto;
-margin-top: 50px;
-margin-bottom: 50px;
-}
-#profile td{
-font-size: 14px;
-padding-left: 10px;
-padding-right: 10px;
-}
-#profile p{
-  margin-top: 7px;
-  margin-bottom: 7px;
-}
-#profile img{
+  text-align: center;
+  width: 150px;
+  height: 150px;
   border-radius: 10px;
 }
-.hello{
-font-weight: bold;
-font-size: 27px;
+.top p{
+  text-align: center;
+  line-height: 5px;
+}
+dl.side{
+  overflow: hidden;
 }
 
-a.twitter{background-color: #55acee;}
-a.github{background-color: #24292E;}
-a.blog{background-color: #008fde;}
-a.SpeakerDeck{background-color: #1F855B;}
-a.Qiita{background-color: #90D15D;}
-a.rubygems{background-color: #E9573F;}
-.account a{
-  font-weight: bold;
-  padding: 8px;
-  border-radius: 3px;
-  text-decoration: none;
-  color: #fff;
-  font-size: 14px;
-}
-.account p{
-  margin-top: 23px;
-}
-
-* {box-sizing: border-box;}
-.nenpyo ul {
-position: relative;
-overflow: hidden;
-list-style: none;
-width: 800px;
-margin: auto;
-padding: 0;
-}
-.nenpyo ul:after {
-content:"";
-z-index: 1;
-position: absolute;
-left: 34%;
-top:0;
-width: 1px;
-margin-left: -2px;
-min-height: 100%;
-background-color: #858aa0;
-}
-.nenpyo li {
-position: relative;
-padding-left: 20px;
+.side dt {
+  display: block;
+  width: 200px;
+clear: left;
 float: left;
-margin-bottom: 10px;
-}
-.nenpyo li.left {
-float: left;
-width: 270px;
 text-align: right;
-padding-right: 25px;
 }
-.nenpyo li.right {
-width: 450px;
-padding-left: 20px;
-background-color: #eee;
-border-radius: 10px;
-margin-left: 20px;
-}
-.nenpyo li.right:before{
-content: "";
-position: absolute;
-top: 27px;
-left: -20px;
-margin-top: -15px;
-border: 10px solid transparent;
-border-right: 10px solid #e0edff;
-}
-.left p{
-  font-weight: bold;
-}
-.item{
-  padding-left: 12px;
-}
-
-/* dot */
-.nenpyo li.left:after {
-content:"";
-z-index: 2;
-position: absolute;
-top: 15px;
-right: -8px;
-left: -8px;
-width: 8px;
-height: 8px;
-border: 3px solid #fff;
-border-radius: 100%;
-background-color: #FC4349;
-transition: .2s;
-}
-.nenpyo li.left:after {
-left: auto;
-}
-.nenpyo li.right:after {
-right: auto;
-}
-.inc{
-font-weight: bold;
-font-size: 14px;
-}
-.speaker{
-  padding-left: 30px;
-}
-
-.project{
-width: 1000px;
-margin: auto;
-overflow: hidden;
-}
-
-.example {/*親div*/
-  position: relative;/*相対配置*/
-  width: 600px;
-  }
-  .label{
-    position: absolute;/*絶対配置*/
-    width: 600px;
-    height: 120px;
-    top: 35%;
-    left: 0;
-    background-color:rgba(255,255,255,0.5);
-  }
-  .example table {
-    margin:0;
-    padding:0;
-    position: absolute;/*絶対配置*/
-    width: 300px;
-    top: 50%;
-    left: 50%;
-    translate(-50%,-50%);
-    transform: translate(-50%,-50%);
-  }
-  .example td{
-    text-align: center;
-    font-size: 14px;
-  }
-  .example a{
-    font-size: 16px;
-    color: #FC4349;
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-.content_left{
+.side dd {
+  margin: 0;
+  padding-left: 10px;
+  display: block;
   float: left;
-  margin-top: 30px;
-  margin-bottom: 30px;
+
 }
-.content_right{
-  margin-top: 30px;
-  margin-bottom: 30px;
+/*---------------------- TIME LINE ----------------------*/
+dl.time_line{
+  border-top: solid 1px #000;
+  display: flex;
+  margin: 100px 0;
 }
-.exp {
-float: left;
-width: 300px;
-height: 300px;
-margin-left: 10px;
-padding-top: 120px;
-text-align: center;
+.block{
+  flex: 1;
+}
+.time_line dt{
+  position: relative;
+  top: -30px;
+  font-size: 13px;
+  text-align: center;
+}
+.time_line dt::after{
+  content:"";
+  z-index: 2;
+  position: absolute;
+  top: 22px;
+  left: 153px;
+  width: 8px;
+  height: 8px;
+  border: 3px solid #fff;
+  border-radius: 100%;
+  background-color: #FC4349;
+}
+.time_line dd{
+  position: relative;
+  margin: 0;
+  top: -10px;
+}
+.time_line p{
+  margin: 0;
+  text-align: center;
 }
 
-.exp p{
-font-size: 14px;
-padding-left: 30px;
-padding-right: 30px;
-}
-.exp a{
-text-decoration: none;
-font-size: 18px;
-font-weight: bold;
-color: #FC4349;
-}
 
-.exp a:link { color: #FC4349; }
-.exp a:visited { color: #FC4349; }
-.exp a:hover { color: #FC4349; }
-.exp a:active { color: #FC4349; }
 
-.noc{
-  width: 800px;
-  margin: auto;
-}
-.others_left {
-float: left;
-width: 280px;
-margin: 10px;
-padding-top: 110px;;
-text-align: center;
-font-size: 13px;
-height: 230px;
-}
-
-.others{
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-}
-.others_right{
-  width: 1000px;
-  height: 230px;
-}
-
-.name {
-font-size: 16px;
-color: #FC4349;
-}
-
-.others_right a:link { color: #FC4349; }
-.others_right a:visited { color: #FC4349; }
-.others_right a:hover { color: #FC4349; }
-.others_right a:active { color: #FC4349; }
-
-.line{
-width: 80px;
-height: 3px;
-background-color: #858aa0;
-margin: auto;
-}
-
-.color{
-  background-color: #eee;
-  width: 100%;
-}
-.talk{margin-bottom: 40px;}
-
-.talk p{
-    margin-left: 100px;
-    padding-left: 100px;
-}
-.border{
-  margin: 20px;
-  font-weight: bold;
-  font-size: 14px;
-  color: #FC4349;
-}
-
-.inst{
-  padding: 8px;
-  background-color: #8B35Bf;
-  color: #fff;
-  border-radius: 3px;
-  text-decoration: none;
-  margin-left: 15px;
-}
 
 /*FOOTER*/
-footer{
-margin-bottom: 0;
-}
-
-.signature{
-font-weight: bold;
-text-align: center;
-font-size: 15px;
+footer p{
+  text-align: center;
 }
